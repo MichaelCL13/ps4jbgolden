@@ -1,0 +1,36 @@
+CACHE MANIFEST 
+# goldHEn PlayStation 4 MichaelCL13
+# v1.0 
+# 23/04/2021-16:15:33,13 
+
+
+CACHE: 
+
+1.0.png
+1.1.png
+B3.png
+blob.js
+checker.js
+goldhen10.html
+goldhen10_755.js
+goldhen11.html
+goldhen11_755.js
+goldhenb3.html
+goldhenb3_755.js
+Hen.png
+hen213b.html
+hen213b.js
+index.html
+jb.js
+loader.js
+netcat.js
+int64.js
+ps4.js
+utils.js
+
+
+FALLBACK: 
+index.html 
+
+NETWORK: 
+* 

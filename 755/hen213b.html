@@ -1,0 +1,82 @@
+<html>
+<style>
+body {
+background-image: url('img.jpg');
+background-attachment: fixed;
+background-size:100%;
+background-repeat:no-repeat;
+background-color: #24272b;
+color:white;
+}
+</style>
+<body onload="go()">
+<script>
+if(document.cookie.indexOf('kex=0') >= 0)
+    document.location.href = '../index.html';
+</script>
+<script>
+function print(){}
+
+var fwFromUA = navigator.userAgent.substring(navigator.userAgent.indexOf('5.0 (') + 19, navigator.userAgent.indexOf(') Apple'));
+fwFromUA = fwFromUA.replace('.', '');
+var scriptCode = '';
+
+function preloadScripts(lst)
+{
+    for(var i = 0; i < lst.length; i++)
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', lst[i], false);
+        xhr.send('');
+        scriptCode += xhr.responseText + '\n';
+    }
+}
+
+function done()
+{
+    if(main_ret == 0 || main_ret == 179)
+    {
+        alert("PlayStation 4 Pirateado");
+        read_ptr_at(0);
+    }
+    else
+        alert("Fallo el intento de Piratear! Se apagara o reiniciara el sistema.");
+}
+
+window.midExploit = function()
+{
+
+    var scripts = ['blob.js', 'jb.js'];
+
+    if (fwFromUA != "750" && fwFromUA != "751" && fwFromUA != "755") {
+        die('Sistem no Compatible!');
+		exit();
+    }
+    
+    scripts.push('loader.js');
+    scripts.push('hen213b.js');
+    scripts.push('netcat.js');
+
+    preloadScripts(scripts, go);
+}
+
+
+window.postExploit = function()
+{
+    document.cookie = 'kex=0';
+    setTimeout(function() //update the screen one last time...
+    {
+        eval.call(window, scriptCode);
+        done();
+    }, 100);
+};
+</script><br><br><br>
+<script src="utils.js"></script>
+<script src="int64.js"></script>
+<script src="ps4.js"></script>
+<button style=opacity:0 id="input1" onfocus="handle2()"></button>
+<button style=opacity:0 id="input2"></button>
+<button style=opacity:0 id="input3" onfocus="handle2()"></button>
+<select style=opacity:0 id="select1"><option value="value1">Value1</option></select>
+</body>
+</html>
