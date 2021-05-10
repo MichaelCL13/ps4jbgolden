@@ -1,6 +1,5 @@
-<html manifest="Cache.manifest">
-
-<head>
+<!DOCTYPE html>
+<html manifest="cache.manifest"><head>
     <meta charset="utf-8" />
     <title>GoldHen Host Menu</title>
     <link rel="shortcut icon" href="favicon.ico"></link>
@@ -22,10 +21,9 @@ overflow: hidden;
 <script>
 </head>   
 <script>
-function CacheProgress(e){Percent=(Math.round(e.loaded / e.total * 100));parent.msgs.innerHTML="Instalando Cache en el navegador: " + Percent + "%";}
-function CachingDone(){setTimeout(function(){parent.msgs.innerHTML="Instalacion del Cache Finalizada ✔";},2000);setTimeout(function(){parent.msgs.innerHTML="Ya puede desconectar la Internet y volver abrir el Navegador ...";},4000);}
-function UpdateDone(){setTimeout(function(){parent.msgs.innerHTML="Actualizacion del Cache Finalizada ✔";},2000);setTimeout(function(){parent.msgs.innerHTML="Ya puede desconectar la Internet y volver abrir el Navegador ...";},4000);}
-window.applicationCache.addEventListener("progress",CacheProgress,false);window.applicationCache.addEventListener('updateready', UpdateDone,false);window.applicationCache.oncached=function(e){CachingDone();};
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Instalando Cache en el navegador: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Instalacion del Cache Finalizada ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Ya puede desconectar la Internet y volver abrir el Navegador ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+document.cookie = 'kex=1';
 </script>
 <body style="background-color:#3462a8;color:white;font-size:20px;text-align:center;">
 <h1 style='font-size:40px;margin:0;'> goldHEn PlayStation 4 MichaelCL13 </h1>
